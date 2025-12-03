@@ -1,0 +1,976 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oxanium:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* --- Color --- */
+:root {
+  --color-bg-body: #f9f9f9;
+
+
+  --color-text-important: #1e293b;
+  /* texto oscucuro para elementos importantes */
+  --color-bg-hover: #eaeaea;
+  /* hover item del menu */
+  --color-surface: #f8fafc;
+  /* fondo general app */
+  --color-border: #d2d2d2;
+  /* color borders */
+  --color-text-hover: #525252;
+  /* texto hover */
+  --color-text: #9f9f9f;
+  /* texto secundario */
+  --color-accent: #9af7c4;
+  /* verde cta */
+  --color-accent-hover: rgb(68, 237, 181);
+  /* verde cta hover */
+  --color-heading: #676767;
+  --color-bg-section: #f8f8f8;
+  --color-texto-cads-historias: #efefef;
+  --color-cta-secondary: #ffc685;
+  --color-cta-secondary-hover: #fcb058;
+
+  /* --- Radius --- */
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* --- Transiciones --- */
+  --transition: 0.15s ease;
+
+  /* --- Tipografias --- */
+  --font-primary: "Inter Tight", sans-serif;
+  --font-secondary: "Urbanist", sans-serif;
+}
+
+/* --- RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* --- HEADER --- */
+header {
+  background-color: var(--color-bg-body);
+  border-bottom: 1px solid var(--color-border);
+  height: 70px;
+}
+
+.h1-header {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.3rem;
+  color: var(--color-heading);
+}
+
+.a-header {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--color-heading);
+  transition: 0.15s ease;
+}
+
+.a-header:hover {
+  color: var(--color-accent);
+}
+
+.a-header:active {
+  color: rgb(112, 255, 207)
+}
+
+.header-user-info {
+  display: flex;
+}
+
+.header-user-info-a {
+  border-color: var(--color-border);
+  color: var(--color-heading);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 300;
+  transition: 0.15s ease;
+}
+
+.header-user-info-a:hover {
+  color: var(--color-cta-secondary-hover);
+  border-color: var(--color-cta-secondary-hover);
+  background-color: #ffe4c6;
+}
+
+.header-user-info-a:active {
+  background-color: #ffe9d0;
+}
+
+.header-user-info a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+}
+
+.hamburguesa {
+  display: none;
+  position: relative;
+}
+
+#navbarToggleExternalContent {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 100;
+}
+
+.hamburguesa button {
+  background-color: var(--color-bg-body);
+}
+
+.boton-hamburguesa {
+  border: 1px solid var(--color-border);
+}
+
+.boton-hamburguesa:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.background-cuerpo-hamburguesa {
+  background-color: var(--color-bg-body);
+  border: 1px solid var(--color-border);
+}
+
+.boton-nav-hamburguesa {
+  text-decoration: none;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.3rem;
+  transition: 0.15s ease;
+  color: var(--color-heading)
+}
+
+.boton-nav-hamburguesa:hover {
+  color: var(--color-accent);
+}
+
+.boton-nav-hamburguesa:active {
+  color: rgb(112, 255, 207);
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  background-color: var(--color-bg-body);
+  width: 150px;
+  border-right: 1px solid var(--color-border);
+  height: 100%;
+  margin-top: 70px;
+}
+
+.boton-nav-sidebar {
+  text-decoration: none;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.8rem;
+  transition: 0.15s ease;
+  color: var(--color-heading);
+}
+
+.boton-nav-sidebar:hover {
+  color: var(--color-text-important);
+}
+
+.boton-nav-sidebar:active {
+  color: rgb(107, 107, 107)
+}
+
+
+.boton-icon-sidebar {
+  transition: 0.2s ease;
+  width: 80px;
+  height: 80px;
+}
+
+.boton-icon-sidebar:hover {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-hover);
+  cursor: pointer;
+  color: var(--color-text-important);
+  border-radius: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: var(--color-text-hover);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  margin-left: 150px;
+  margin-top: 70px;
+  gap: 1rem;
+  background-color: var(--color-bg-body);
+}
+
+
+
+
+/* --- Section General --- */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-body);
+  gap: 1.5rem;
+  border-style: solid;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-surface);
+  gap: 1.5rem;
+  border-style: solid;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.hero-section button {
+  color: var(--color-text-hover);
+  padding: 10px 20px;
+  background-color: var(--color-accent);
+  border-color: var(--color-border);
+  border-style: solid;
+  border-radius: var(--radius-md);
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+
+.hero-section p {
+  color: var(--color-text-important)
+}
+
+.hero-section button:hover {
+  background-color: var(--color-accent-hover);
+  color: var(--color-text-important);
+  border-color: var(--color-border);
+  border-style: solid;
+  border-radius: var(--radius-md);
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+
+/* --- Mis Historias Section --- */
+.mis-historias {
+  padding: 0.8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cards-historias {
+  padding: 0.8rem;
+  width: 100%;
+  min-height: 250px;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.conteudo-card {
+  min-height: 250px;
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 0.8rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.conteudo-card h3 {
+  color: var(--color-texto-cads-historias);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+#patagonia {
+  background-image: url('../img/patagonia.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#bahia {
+  background-image: url('../img/bahia.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#munay {
+  background-image: url('../img/munay.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#pantanal {
+  background-image: url('../img/pantanal.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#alaska {
+  background-image: url('../img/alaska.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* --- Mi Familia Section --- */
+.nombre-familia {
+  background: var(--color-bg-section);
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  gap: 1rem;
+}
+
+.nombre-familia button {
+  color: var(--color-text-hover);
+  padding: 10px 20px;
+  background-color: var(--color-cta-secondary);
+  border-color: var(--color-border);
+  border-style: solid;
+  border-radius: var(--radius-md);
+  transition: 0.25s ease;
+  cursor: pointer;
+  margin-bottom: -32px;
+}
+
+.nombre-familia p {
+  color: var(--color-text-important)
+}
+
+.nombre-familia button:hover {
+  background-color: var(--color-cta-secondary-hover);
+  color: var(--color-text-important);
+  border-color: var(--color-border);
+  border-style: solid;
+  border-radius: var(--radius-md);
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+
+.cards-familia {
+  padding: 2rem;
+  width: 100%;
+  min-height: 250px;
+  gap: 1rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.conteudo-card-familia:nth-child(1),
+.conteudo-card-familia:nth-child(2) {
+  grid-column: span 1;
+}
+
+.conteudo-card-familia {
+  min-height: 250px;
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: var(--transition);
+}
+
+.conteudo-card-familia h3:hover {
+  color: var(--color-cta-secondary-hover);
+}
+
+.conteudo-card-familia img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+}
+
+/* --- Header Page Crear --- */
+.divisor-vertical {
+  width: 1px;
+  height: 24px;
+  background-color: var(--color-text);
+  margin: 0 0.8rem;
+}
+
+.btn-crear {
+  color: var(--color-texto);
+  padding: 4px 16px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: var(--transition) ease;
+  cursor: pointer;
+}
+
+.btn-crear:hover {
+  color: var(--color-heading);
+  background-color: var(--color-bg-hover);
+  border-color: var(--color-heading);
+}
+
+.input-titulo-album-crear {
+  color: var(--color-texto);
+  padding: 4px 16px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: var(--transition) ease;
+}
+
+.input-titulo-album-crear:focus {
+  border-color: var(--color-heading);
+}
+
+.input-titulo-album-crear:hover {
+  border-color: var(--color-heading);
+}
+
+.cta-crear {
+  color: var(--color-text-hover);
+  padding: 4px 20px;
+  background-color: var(--color-accent);
+  border-color: var(--color-border);
+  border-style: solid;
+  border-radius: var(--radius-md);
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+
+.cta-crear:hover {
+  background-color: var(--color-accent-hover);
+  color: var(--color-text-important);
+  border-color: var(--color-border);
+  border-style: solid;
+  border-radius: var(--radius-md);
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+
+/* --- Chat Agente - Page Crear --- */
+.space-agente {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.space-agente textarea {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-heading);
+  box-sizing: border-box;
+  padding: 0.8rem;
+}
+
+.space-agente textarea:focus {
+  border-color: var(--color-heading);
+}
+
+.space-agente textarea:hover {
+  border-color: var(--color-heading);
+}
+
+.botones-agente {
+  gap: 0.5rem;
+  position: absolute;
+  padding: 0.8rem;
+}
+
+.btn-chat-agente {
+  color: var(--color-texto);
+  padding: 4px 16px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: var(--transition) ease;
+  cursor: pointer;
+}
+
+.btn-chat-agente:hover {
+  color: var(--color-heading);
+  background-color: var(--color-bg-hover);
+  border-color: var(--color-heading);
+}
+
+/* --- Hero Section Crear --- */
+.crear-hero-section {
+  gap: 0.1rem;
+  padding: 0.8rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.crear-hero-section img {
+  width: 75%;
+  height: 75%;
+  border: 1px solid var(--color-border);
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+/* --- Section Page Fotos --- */
+.page-fotos {
+  gap: 1rem;
+  padding: 0.8rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.page-fotos p {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2px 6px;
+  transition: var(--transition) ease;
+  cursor: pointer;
+}
+
+.page-fotos p:hover {
+  color: var(--color-heading);
+  background-color: var(--color-bg-hover);
+  border-color: var(--color-heading);
+}
+
+.contador-paginas {
+  color: var(--color-text);
+  font-size: 0.8rem;
+}
+
+.page-fotos input {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-heading);
+  box-sizing: border-box;
+  padding: 0.2rem;
+  width: 48px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* --- Agregar Fotos --- */
+.metodos-agregar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0.8rem;
+}
+
+.conteudo-agregar {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  height: 200px;
+  width: 200px;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.conteudo-agregar h3 {
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.conteudo-agregar h3:hover {
+  color: var(--color-heading);
+
+}
+
+.conteudo-agregar img {
+  width: 70%;
+  height: 80%;
+  border: 1px solid var(--color-border);
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  padding: 0.8rem;
+  transition: var(--transition) ease;
+}
+
+.conteudo-agregar img:hover {
+  width: 70%;
+  height: 80%;
+  border: 1px solid var(--color-heading);
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  padding: 0.8rem;
+  background-color: var(--color-bg-hover);
+  cursor: pointer;
+}
+
+/* --- Section Fotos --- */
+.section-fotos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.8rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  width: 100%;
+}
+
+.busqueda-fotos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem;
+}
+
+.busqueda-fotos input {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  color: var(--color-heading);
+  box-sizing: border-box;
+  padding: 0.8rem;
+  height: 32px;
+  align-items: center;
+  justify-content: left;
+  font-size: 0.8rem;
+}
+
+.btn-busqueda-fotos {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-heading);
+  display: flex;
+  box-sizing: border-box;
+  padding: 0.8rem;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: var(--transition) ease;
+}
+
+.filtros-fotos {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 32px;
+  align-items: center;
+  justify-content: left;
+  gap: 1rem;
+  padding: 0.8rem;
+  margin-top: -1rem;
+}
+
+.btn-filtro-fotos {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  display: flex;
+  box-sizing: border-box;
+  padding: 0.8rem;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: var(--transition) ease;
+}
+
+.btn-filtro-fotos:hover {
+  color: var(--color-heading);
+  background-color: var(--color-bg-hover);
+  border-color: var(--color-heading);
+}
+
+.btn-busqueda-fotos:hover {
+  color: var(--color-heading);
+  background-color: var(--color-bg-hover);
+  border-color: var(--color-heading);
+}
+
+/* --- Section Historias - Page Historias --- */
+.section-mis-historias-page button {
+  color: var(--color-text-hover);
+  padding: 10px 20px;
+  background-color: var(--color-accent);
+  border-color: var(--color-border);
+  border-style: solid;
+  border-radius: var(--radius-md);
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+
+.section-mis-historias-page button:hover {
+  background-color: var(--color-accent-hover);
+  color: var(--color-text-important);
+  border-color: var(--color-border);
+  border-style: solid;
+  border-radius: var(--radius-md);
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+
+/* --- User Info - Header --- */
+.section-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  width: 100%;
+}
+
+.section-user-info p {
+  color: var(--color-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.section-user-info input {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  color: var(--color-heading);
+  box-sizing: border-box;
+  padding: 0.8rem;
+  height: 32px;
+  align-items: center;
+  justify-content: left;
+  font-size: 0.8rem;
+}
+
+.campo-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  width: 100%;
+}
+
+/* --- Footer --- */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 300;
+  background-color: var(--color-bg-body);
+  padding: 8px;
+  bottom: 0;
+  position: bottom;
+  width: 100%;
+  z-index: 100;
+  margin-left: 150px;
+  border-top: 1px solid var(--color-border);
+}
+
+footer p a {
+  font-family: "Inter Tight", sans-serif;
+  color: var(--color-texto);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: var(--color-accent);
+}
+
+
+
+
+@media (max-width: 992px) {
+  .cards-familia {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Os primeiros cards voltam ao normal */
+  .cards-familia .conteudo-card-familia:nth-child(1),
+  .cards-familia .conteudo-card-familia:nth-child(2) {
+    grid-column: span 1;
+  }
+
+/*   .textarea-agent {
+    rows:"15";
+    cols:"18";
+
+  } */
+}
+
+@media(max-width: 577px) {
+
+  /* --- HEADER --- */
+  header {
+
+    padding: 10px;
+  }
+
+  footer {
+    margin-left: 0px;
+  }
+
+  .h1-header {
+    font-size: 1.1rem;
+  }
+
+  /* mostra o botão hamburguesa no mobile */
+  .hamburguesa {
+    display: block;
+  }
+
+  /* esconde os botões de navegação do desktop */
+  .header-user-info {
+    display: none !important;
+  }
+
+  /* --- SIDEBAR --- */
+  .sidebar {
+    display: none;
+    /* sidebar some no mobile */
+  }
+
+  /* --- MAIN --- */
+  main {
+    margin-left: 0;
+    /* remove espaço da sidebar */
+    padding: 16px;
+  }
+
+  /* --- HERO SECTION --- */
+  .hero-section {
+    padding: 1rem;
+  }
+
+  /* --- CARDS HISTORIAS --- */
+  .cards-historias {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .conteudo-card {
+    max-width: 100%;
+  }
+
+  /* --- FAMILIA SECTION --- */
+  .cards-familia {
+    grid-template-columns: 1fr;
+    /* vira 1 coluna */
+  }
+
+  .cards-familia .conteudo-card-familia:nth-child(1),
+  .cards-familia .conteudo-card-familia:nth-child(2) {
+    grid-column: span 1;
+  }
+
+  /* --- AGREGAR FOTOS --- */
+  .metodos-agregar {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .conteudo-agregar {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  /* --- BUSQUEDA FOTOS --- */
+  .busqueda-fotos {
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .filtros-fotos {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 0.5rem;
+  }
+
+  /* --- PAGE FOTOS --- */
+  .page-fotos {
+    flex-direction: column;
+  }
+}
