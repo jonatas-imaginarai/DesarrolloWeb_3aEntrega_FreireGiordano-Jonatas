@@ -1,3 +1,5 @@
+@use 'sass:map';
+@use '../utilities/maps' as mapa;
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
@@ -19,4 +21,5 @@ main {
   padding-top: 70px;
   margin-left: 150px;
   min-height: 100vh;
-}
+  background-color: map.get(mapa.$colores, color-bg-body);
+};

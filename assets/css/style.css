@@ -17,6 +17,7 @@ main {
   padding-top: 70px;
   margin-left: 150px;
   min-height: 100vh;
+  background-color: #daddde;
 }
 
 /* FONTES */
@@ -141,6 +142,38 @@ main {
 }
 .sidebar .boton-nav-sidebar a span:hover {
   color: rgb(68, 237, 181);
+}
+
+.hero-section {
+  border: 1px solid #d2d2d2;
+  border-radius: 4px;
+  background-color: #b3c3dd;
+}
+.hero-section h2 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  color: #25282d;
+}
+.hero-section p {
+  font-family: "Josefin Sans", sans-serif;
+}
+.hero-section .boton-cta {
+  border: 1px solid #d2d2d2;
+  background: #9af7c4;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.hero-section .boton-cta:hover {
+  background: rgb(68, 237, 181);
+}
+.hero-section .boton-cta:active {
+  background: #9af7c4;
+}
+
+.mis-historias-section h2 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
 }
 
 footer {

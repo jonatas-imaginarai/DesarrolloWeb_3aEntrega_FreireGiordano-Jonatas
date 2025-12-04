@@ -1,0 +1,37 @@
+@use '../utilities/variables';
+@use 'sass:map';
+@use '../utilities/maps' as mapa;
+
+
+.hero-section {
+    border: 1px solid map.get(mapa.$colores, color-border);
+    border-radius: variables.$radius-medium;
+    background-color: map.get(mapa.$colores, color-bg-section);
+
+    h2 {
+    font-family: variables.$fonte-secundaria-headings;
+    font-weight: 700;
+    color: map.get(mapa.$colores, color-text-important)
+};
+
+    p {
+        font-family: variables.$fonte-primaria-texto;
+    }
+
+    .boton-cta {
+        border: 1px solid map.get(mapa.$colores, color-border);
+        background: map.get(mapa.$colores, color-accent);
+        font-family: variables.$fonte-secundaria-headings;
+        font-weight: 500;
+        font-size: 0.8rem;
+
+        &:hover {
+            background: map.get(mapa.$colores, color-accent-hover);
+        }
+
+        &:active {
+            background: map.get(mapa.$colores, color-accent);
+        }
+    }
+};
+
