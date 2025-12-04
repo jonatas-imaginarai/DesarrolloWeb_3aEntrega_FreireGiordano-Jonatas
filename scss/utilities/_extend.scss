@@ -1,0 +1,14 @@
+@use 'sass:map';
+@use '../utilities/maps'as mapa;
+@use '../utilities/variables';
+
+%elementos-centrados {
+    justify-content: center;
+    align-items: center;
+};
+
+%cards-section {
+    background-color: map.get(mapa.$colores, color-bg-card-section);
+    border: 1px solid map.get(mapa.$colores, color-border);
+    border-radius: variables.$radius-medium;
+};

@@ -1,11 +1,11 @@
 @use '../utilities/variables';
 @use 'sass:map';
 @use '../utilities/maps' as mapa;
+@use '../utilities/extend' as extend;
 
 
 .hero-section {
-    border: 1px solid map.get(mapa.$colores, color-border);
-    border-radius: variables.$radius-medium;
+    @extend %cards-section;
     background-color: map.get(mapa.$colores, color-bg-section);
 
     h2 {

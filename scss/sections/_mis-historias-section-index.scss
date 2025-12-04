@@ -1,0 +1,42 @@
+@use '../utilities/variables';
+@use '../utilities/extend' as extend;
+@use 'sass:map';
+@use '../utilities/maps' as mapa;
+@use '../utilities/mixin';
+
+
+.mis-historias-section {
+    @extend %elementos-centrados;
+    @extend %cards-section;
+
+    h2 {
+        font-family: variables.$fonte-secundaria-headings;
+        font-weight: bold;
+    }
+
+    .cards-historias {
+        @include mixin.alineacion (end, left);
+        align-items: left;
+        padding: 0.8rem;
+        min-height: 250px;
+        border: 1px solid map.get(mapa.$colores, color-border);
+        border-radius: variables.$radius-large;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+    }
+
+    ;
+
+    .conteudo-card h3 {
+        color: map.get(mapa.$colores, color-texto-blanco);
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    };
+
+    #patagonia {
+        @include mixin.fotos-historias ('/assets/img/patagonia.jpg', cover, center, no-repeat)
+
+
+    }
+
+};

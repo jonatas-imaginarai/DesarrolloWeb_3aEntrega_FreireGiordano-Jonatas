@@ -1,0 +1,11 @@
+@mixin alineacion ($justify, $align) {
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin fotos-historias ($urlFoto, $back-size, $back-position, $back-repeat) {
+    background-image: url($urlFoto);
+    background-size: $back-size;
+    background-position: $back-position;
+    background-repeat: $back-repeat;
+}

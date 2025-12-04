@@ -144,9 +144,18 @@ main {
   color: rgb(68, 237, 181);
 }
 
-.hero-section {
+.mis-historias-section {
+  justify-content: center;
+  align-items: center;
+}
+
+.mis-historias-section, .hero-section {
+  background-color: #ddceb3;
   border: 1px solid #d2d2d2;
   border-radius: 4px;
+}
+
+.hero-section {
   background-color: #b3c3dd;
 }
 .hero-section h2 {
@@ -174,6 +183,28 @@ main {
 .mis-historias-section h2 {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: bold;
+}
+.mis-historias-section .cards-historias {
+  justify-content: end;
+  align-items: left;
+  align-items: left;
+  padding: 0.8rem;
+  min-height: 250px;
+  border: 1px solid #d2d2d2;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.mis-historias-section .conteudo-card h3 {
+  color: #ededed;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+.mis-historias-section #patagonia {
+  background-image: url("/assets/img/patagonia.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 footer {
