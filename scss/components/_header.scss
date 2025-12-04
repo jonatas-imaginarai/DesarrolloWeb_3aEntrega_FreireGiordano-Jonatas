@@ -1,0 +1,152 @@
+@use '../utilities/variables';
+@use '../utilities/maps';
+@use 'sass:map';
+@use'../utilities/maps' as mapa;
+
+
+.mi-header {
+    height: 70px;
+    background-color: map.get(mapa.$colores, color-bg-header);
+    border-bottom: 1px solid map.get(mapa.$colores, color-border);
+
+    .h1-header {
+
+        .a-header {
+            text-decoration: none;
+            font-family: variables.$fonte-terciaria-logo;
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-style: normal;
+            transition: variables.$transicion;
+            color: map.get(mapa.$colores, color-texto-blanco);
+
+            &:hover {
+                color: map.get(mapa.$colores, color-accent-hover);
+            }
+
+            &:active {
+                color: map.get(mapa.$colores, color-accent-active)
+            }
+        }
+    }
+}
+
+;
+
+.header-user-info-a {
+    border: 1px solid map.get(mapa.$colores, color-texto-blanco);
+    border-radius: variables.$radius-medium;
+    color: map.get(mapa.$colores, color-texto-blanco);
+    transition: variables.$transicion;
+    text-decoration: none;
+    font-family: variables.$fonte-secundaria-headings;
+    font-weight: 300;
+    font-size: 0.8rem;
+
+    &:hover {
+        color: map.get(mapa.$colores, color-accent-hover);
+        border-color: map.get(mapa.$colores, color-accent-hover);
+    }
+
+    &:active {
+        color: map.get(mapa.$colores, color-accent-active);
+        border-color: map.get(mapa.$colores, color-accent-active);
+    }
+}
+
+;
+
+.img-foto-perfil {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid map.get(mapa.$colores, color-texto-blanco);
+    transition: variables.$transicion;
+
+    &:hover {
+        border-color: map.get(mapa.$colores, color-accent-hover);
+    }
+}
+
+.hamburguesa {
+    display: none;
+    position: relative;
+}
+
+#navbarToggleExternalContent {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 100;
+}
+
+
+.sidebar {
+    background-color: map.get(mapa.$colores, color-bg-header);
+    border-right: 1px solid map.get(mapa.$colores, color-border);
+    width: 150px;
+    height: 100%;
+    margin-top: 70px;
+    font-family: variables.$fonte-secundaria-headings;
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    .boton-nav-sidebar {
+        color: map.get(mapa.$colores, color-texto-blanco);
+        transition: variables.$transicion;
+        width: 70px;
+        height: 70px;
+        
+
+        &:hover {
+            color: map.get(mapa.$colores, color-accent-hover);
+            border: 1px solid map.get(mapa.$colores, color-accent-hover);
+            border-radius: variables.$radius-medium;
+            cursor: pointer;
+
+            span {
+                color: map.get(mapa.$colores, color-accent-hover);
+            }
+        }
+
+        &:active {
+            color: map.get(mapa.$colores, color-accent-active);
+            border: 1px solid map.get(mapa.$colores, color-accent-active);
+
+            span {
+                color: map.get(mapa.$colores, color-accent-active);
+            }
+        }
+
+
+        a {
+            text-decoration: none;
+            color: map.get(mapa.$colores, color-texto-blanco);
+            transition: variables.$transicion;
+            width: 40px;
+            height: 60px;
+            transition: variables.$transicion;
+
+            img {
+                color: map.get(mapa.$colores, color-texto-blanco);
+                transition: variables.$transicion;
+
+                &:hover {
+                    color: map.get(mapa.$colores, color-accent-hover);
+                }
+
+                &:active {
+                    color: map.get(mapa.$colores, color-accent-active)
+                } 
+            }
+
+            span {
+                transition: variables.$transicion;
+                &:hover {
+                    color: map.get(mapa.$colores, color-accent-hover);
+                }
+            }
+        }
+    }
+};
