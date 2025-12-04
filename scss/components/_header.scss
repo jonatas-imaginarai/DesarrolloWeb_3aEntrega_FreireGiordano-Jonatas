@@ -86,7 +86,7 @@
     background-color: map.get(mapa.$colores, color-bg-header);
     border-right: 1px solid map.get(mapa.$colores, color-border);
     width: 150px;
-    height: 100%;
+    height: calc(100vh - 70px);
     margin-top: 70px;
     font-family: variables.$fonte-secundaria-headings;
     font-size: 0.8rem;

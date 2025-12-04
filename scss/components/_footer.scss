@@ -1,0 +1,32 @@
+@use '../utilities/variables';
+@use 'sass:map';
+@use '../utilities/maps' as mapa;
+
+
+footer {
+    font-family: variables.$fonte-primaria-texto;
+    font-size: 1rem;
+    font-weight: 300;
+    width: 100%;
+    z-index: 100;
+/*     margin-left: 150px; */
+    border-top: 1px solid map.get(mapa.$colores, color-border);
+    background-color: map.get(mapa.$colores, color-bg-header);
+    color: map.get(mapa.$colores, color-texto-blanco);
+
+    p {
+        margin: 0;
+        a {
+            text-decoration: none;
+            color: map.get(mapa.$colores, color-texto-blanco);
+            transition: variables.$transicion;
+            font-family: variables.$fonte-terciaria-logo;
+            &:hover {
+                color: map.get(mapa.$colores, color-accent-hover);
+            }
+            &:active {
+                color: map.get(mapa.$colores, color-accent-active);
+            }
+        }
+    }
+}

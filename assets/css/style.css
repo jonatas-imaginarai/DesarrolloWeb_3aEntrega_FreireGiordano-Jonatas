@@ -13,6 +13,12 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  padding-top: 70px;
+  margin-left: 150px;
+  min-height: 100vh;
+}
+
 /* FONTES */
 /* RADIUS */
 /* TRANSICIONES */
@@ -84,7 +90,7 @@ body {
   background-color: #415b85;
   border-right: 1px solid #d2d2d2;
   width: 150px;
-  height: 100%;
+  height: calc(100vh - 70px);
   margin-top: 70px;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 0.8rem;
@@ -135,6 +141,33 @@ body {
 }
 .sidebar .boton-nav-sidebar a span:hover {
   color: rgb(68, 237, 181);
+}
+
+footer {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  width: 100%;
+  z-index: 100;
+  /*     margin-left: 150px; */
+  border-top: 1px solid #d2d2d2;
+  background-color: #415b85;
+  color: #ededed;
+}
+footer p {
+  margin: 0;
+}
+footer p a {
+  text-decoration: none;
+  color: #ededed;
+  transition: 0.15s ease;
+  font-family: "Jost", sans-serif;
+}
+footer p a:hover {
+  color: rgb(68, 237, 181);
+}
+footer p a:active {
+  color: rgb(168, 255, 226);
 }
 
 /*# sourceMappingURL=style.css.map */
