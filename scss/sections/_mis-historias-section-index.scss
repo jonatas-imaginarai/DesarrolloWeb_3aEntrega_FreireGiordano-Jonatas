@@ -9,34 +9,55 @@
     @extend %elementos-centrados;
     @extend %cards-section;
 
-    h2 {
+    h2 { 
         font-family: variables.$fonte-secundaria-headings;
         font-weight: bold;
     }
 
-    .cards-historias {
-        @include mixin.alineacion (end, left);
-        align-items: left;
-        padding: 0.8rem;
-        min-height: 250px;
+    .grilla-historias {
+        @extend %elementos-centrados;
+        z-index: 200;
+    }
+
+    .card-historia {
         border: 1px solid map.get(mapa.$colores, color-border);
         border-radius: variables.$radius-large;
-        cursor: pointer;
         position: relative;
         z-index: 2;
+        overflow: hidden;
+        width: 290px;
+        height: 340px;
+
+        img {
+            width: 100%;
+            height: 200px;
+            margin: 0 auto;
+        }
     }
 
     ;
 
-    .conteudo-card h3 {
-        color: map.get(mapa.$colores, color-texto-blanco);
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-    };
-
-    #patagonia {
-        @include mixin.fotos-historias ('/assets/img/patagonia.jpg', cover, center, no-repeat)
-
-
+    .conteudo-card {
+        border-radius: variables.$radius-large;
     }
 
-};
+    ;
+
+    .boton-historias {
+        border-color: map.get(mapa.$colores, color-border-boton);
+        border-radius: variables.$radius-large;
+        background-color: map.get(mapa.$colores, color-bg-header);
+        color: map.get(mapa.$colores, color-texto-blanco);
+        &:hover {
+            background-color: map.get(mapa.$colores, color-boton-historias-hover);
+        }
+        &:active {
+            background-color: map.get(mapa.$colores, color-boton-historias-active);
+            color: map.get(mapa.$colores, color-texto-blanco);
+        }
+    }
+
+
+}
+
+;
