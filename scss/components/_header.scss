@@ -91,6 +91,7 @@
     font-family: variables.$fonte-secundaria-headings;
     font-size: 0.8rem;
     font-weight: 400;
+    z-index: 1;
 
     .boton-nav-sidebar {
         color: map.get(mapa.$colores, color-texto-blanco);

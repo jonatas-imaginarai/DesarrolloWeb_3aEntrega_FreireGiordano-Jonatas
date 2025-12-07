@@ -1,0 +1,68 @@
+@use '../utilities/extend' as extend;
+@use '../utilities/variables';
+@use 'sass:map';
+@use '../utilities/maps' as mapa;
+
+.mi-familia-section {
+    @extend %cards-section;
+    @extend %elementos-centrados;
+
+    h2 {
+        font-family: variables.$fonte-secundaria-headings;
+        font-weight: bold;
+    }
+
+    .boton-cta-secondary {
+        border-color: map.get(mapa.$colores, color-border-boton);
+        border-radius: variables.$radius-large;
+        background-color: map.get(mapa.$colores, color-bg-header);
+        color: map.get(mapa.$colores, color-texto-blanco);
+
+        &:hover {
+            background-color: map.get(mapa.$colores, color-boton-historias-hover);
+        }
+
+        &:active {
+            background-color: map.get(mapa.$colores, color-boton-historias-active);
+            color: map.get(mapa.$colores, color-texto-blanco);
+        }
+    }
+
+    .cards-familia {
+
+        .column-madre-padre {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            gap: 40px;
+            margin-bottom: 0.4rem;
+        }
+
+        .column-hijos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            gap: 80px;
+            margin-bottom: 60px;
+        }
+    }
+
+    .conteudo-card-familia {
+        @extend %elementos-centrados;
+        height: 250px;
+        width: 100%;
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid map.get(mapa.$colores, color-texto-blanco);
+            transition: variables.$transicion;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

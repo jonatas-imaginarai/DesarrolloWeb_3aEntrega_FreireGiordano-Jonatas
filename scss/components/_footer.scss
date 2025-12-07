@@ -8,11 +8,13 @@ footer {
     font-size: 1rem;
     font-weight: 300;
     width: 100%;
-    z-index: 100;
-/*     margin-left: 150px; */
+    position: relative;
+
     border-top: 1px solid map.get(mapa.$colores, color-border);
     background-color: map.get(mapa.$colores, color-bg-header);
     color: map.get(mapa.$colores, color-texto-blanco);
+    text-wrap: wrap;
+    z-index: 100;
 
     p {
         margin: 0;
