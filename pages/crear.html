@@ -15,17 +15,17 @@
 <body>
 
     <!-- ===== HEADER ===== -->
-    <header class="container-fluid align-items-center d-flex justify-content-between position-fixed top-0 p-3 z-3">
-        <h1 class="h1-header m-0 d-flex justify-content-center p-3 align-items-center">
+    <header
+        class="container-fluid d-flex align-items-center justify-content-between position-fixed top-0 p-3 z-3 mi-header">
+        <h1 class="h1-header d-flex justify-content-center align-items-center m-0 p-3">
             <a href="../index.html" class="a-header">imaginar historias</a>
         </h1>
-        <div class="header-user-info m-0 p-3 align-items-center gap-3">
-            <a href="../pages/usuario.html" class="header-user-info-a p-2 border border-1 rounded">{Nombre del
-                Usuario}</a>
-            <a href="../pages/usuario.html"><img src="../assets/img/JonatasFG.jpg" alt="Foto Perfil Usuario"></a>
+        <div class="header-user-info d-flex align-items-center m-0 p-3 gap-3">
+            <a href="../pages/usuario.html" class="header-user-info-a p-2">Jonatas Freire Giordano</a>
+            <a href="../pages/usuario.html"><img src="../assets/img/JonatasFG.jpg" alt="Foto Perfil Usuario"
+                    class="img-foto-perfil"></a>
         </div>
         <div class="hamburguesa p-3">
-
             <nav class="navbar border-1">
                 <div class="container-fluid">
                     <button class="boton-hamburguesa navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -55,29 +55,40 @@
         class="sidebar d-none d-sm-block vh-100 d-flex flex-column position-fixed justify-content-center align-items-center p-2 gap-3">
         <nav class="h-75 d-flex flex-column justify-content-center align-items-center mt-3">
             <ul class="d-flex flex-column justify-content-between align-items-center h-100 m-0 ps-0">
-                <div class="boton-icon-sidebar d-flex flex-column align-items-center justify-content-center p-1">
-                    <a href="../index.html" class="boton-nav-sidebar text-decoration-none p-2">
-                        <img src="../assets/icons/home-icon.svg" alt="home-icon" class="w-100 mb-2">
-                        <li class="object-fit">Home</li>
-                    </a>
-                </div>
-                <div class="boton-icon-sidebar d-flex flex-column align-items-center justify-content-center p-1">
-                    <a href="../pages/crear.html" class="boton-nav-sidebar text-decoration-none p-2">
-                        <img src="../assets/icons/crear-icon.svg" alt="home-icon" class="w-100 mb-2">
-                        <li class="object-fit">Crear</li>
-                    </a>
-                </div>
-                <div class="boton-icon-sidebar d-flex flex-column align-items-center justify-content-center p-1">
-                    <a href="../pages/historias.html" class="boton-nav-sidebar text-decoration-none p-2">
-                        <img src="../assets/icons/historias-icon.svg" alt="home-icon" class="w-100 mb-2">
-                        <li class="object-fit">Historias</li>
-                    </a>
-                </div>
-                <div class="boton-icon-sidebar d-flex flex-column align-items-center justify-content-center p-1">
-                    <a href="../pages/fotos.html" class="boton-nav-sidebar text-decoration-none p-2">
-                        <img src="../assets/icons/fotos-icon.svg" alt="home-icon" class="w-100 mb-2">
-                        <li class="object-fit">Fotos</li>
-                    </a>
+                <div
+                    class="boton-icon-sidebar d-flex flex-column align-items-center justify-content-center p-2 mt-2 gap-2">
+                    <li
+                        class="boton-nav-sidebar text-decoration-none d-flex flex-column justify-content-center align-items-center p-2">
+                        <a href="../index.html"
+                            class="d-flex flex-column align-items-center justify-content-center p-2 gap-1">
+                            <img src="../assets/icons/icon-home-svg.svg" alt="home-icon" class="icon-sidebar w-100">
+                            <span class="object-fit texto-nav-boton">Home</span>
+                        </a>
+                    </li>
+                    <li
+                        class="boton-nav-sidebar text-decoration-none d-flex flex-column justify-content-center align-items-center p-2">
+                        <a href="../pages/crear.html"
+                            class="d-flex flex-column align-items-center justify-content-center p-2 gap-1">
+                            <img src="../assets/icons/create-icon-svg.svg" alt="home-icon" class="icon-sidebar w-100">
+                            <span class="object-fit texto-nav-boton">Crear</span>
+                        </a>
+                    </li>
+                    <li
+                        class="boton-nav-sidebar text-decoration-none d-flex flex-column justify-content-center align-items-center p-2">
+                        <a href="../pages/historias.html"
+                            class="d-flex flex-column align-items-center justify-content-center p-2 gap-1">
+                            <img src="../assets/icons/book-icon-svg.svg" alt="home-icon" class="icon-sidebar w-100">
+                            <span class="object-fit texto-nav-boton">Historias</span>
+                        </a>
+                    </li>
+                    <li
+                        class="boton-nav-sidebar text-decoration-none d-flex flex-column justify-content-center align-items-center p-2">
+                        <a href="../pages/fotos.html"
+                            class="d-flex flex-column align-items-center justify-content-center p-2 gap-1">
+                            <img src="../assets/icons/photo-icon-svg.svg" alt="home-icon" class="icon-sidebar w-100">
+                            <span class="object-fit texto-nav-boton">Fotos</span>
+                        </a>
+                    </li>
                 </div>
             </ul>
         </nav>
@@ -89,7 +100,8 @@
         <section class="crear-hero-section container-fluid d-flex flex-md-row">
             <img src="../assets/img/mockup-album.png" alt="" class="container-fluid">
             <div class="space-agente container-fluid">
-                <textarea class="textarea-agent container-fluid mt-3" name="chat-agente" rows="22" cols="25" placeholder="Contame más acerca de la foto"></textarea>
+                <textarea class="textarea-agent container-fluid mt-3" name="chat-agente" rows="22" cols="25"
+                    placeholder="Contame más acerca de la foto"></textarea>
                 <div class="botones-agente d-flex align-items-center justify-content-center flex-column">
                     <button class="btn-chat-agente container-fluid m-2">Enviar</button>
                     <button class="btn-chat-agente container-fluid m-2">Dictar</button>
@@ -107,8 +119,10 @@
 
     </main>
 
-    <footer class="text-center">
-        <p class="text-center">&copy; 2025 <a href="../index.html">imaginar historias</a>. Todos los derechos reservados.</p>
+    <footer class="text-center position-relative bottom-0 d-flex align-items-center justify-content-center p-2">
+        <p class="text-center p-2">&copy; 2025 <a href="../index.html">imaginar historias</a>. Todos los derechos
+            reservados.
+        </p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
