@@ -10,14 +10,14 @@
 
 body {
   width: 100%;
-  overflow-x: hidden;
-  height: 100%;
+  /*  overflow-x: hidden; */
+  min-height: 100vh;
 }
 
 main {
   padding-top: 70px;
   margin-left: 150px;
-  min-height: 100vh;
+  min-height: calc(100vh - 130px);
   background-color: #ffffff;
 }
 
@@ -146,7 +146,7 @@ main {
   color: rgb(68, 237, 181);
 }
 
-.mi-familia-section, .mi-familia-section .conteudo-card-familia, .mis-historias-section, .mis-historias-section .grilla-historias {
+.hero-sec-crear, .hero-sec-crear .carousel-crear, .mi-familia-section, .mi-familia-section .conteudo-card-familia, .mis-historias-section, .mis-historias-section .grilla-historias {
   justify-content: center;
   align-items: center;
 }
@@ -272,6 +272,7 @@ footer {
   font-size: 1rem;
   font-weight: 300;
   width: 100%;
+  height: 80px;
   position: relative;
   border-top: 1px solid #d2d2d2;
   background-color: #415b85;
@@ -295,10 +296,20 @@ footer p a:active {
   color: rgb(168, 255, 226);
 }
 
+.hero-sec-crear {
+  width: calc(100vw - 170px);
+}
+.hero-sec-crear .carousel-item img {
+  border-radius: 6px 4px;
+}
+
 @media (max-width: 992px) {
   .mi-familia-section .cards-familia .column-hijos {
     grid-template-columns: repeat(1, 1fr);
     gap: 0.4rem;
+  }
+  .hero-sec-crear {
+    width: calc(100vw - 170px);
   }
 }
 @media (max-width: 577px) {
@@ -312,6 +323,11 @@ footer p a:active {
   .mi-familia-section .cards-familia .column-hijos {
     grid-template-columns: repeat(1, 1fr);
     gap: 0.4rem;
+  }
+  .hero-sec-crear {
+    width: 100vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 

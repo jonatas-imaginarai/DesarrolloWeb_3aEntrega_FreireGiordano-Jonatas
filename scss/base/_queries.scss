@@ -7,6 +7,10 @@
             };
         }
     }
+
+    .hero-sec-crear {
+    width: calc(100vw  - 170px);
+    };
 }
 
 @media(max-width: 577px) {
@@ -29,4 +33,10 @@
             };
         }
     }
+
+    .hero-sec-crear {
+    width: 100vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    };
 }

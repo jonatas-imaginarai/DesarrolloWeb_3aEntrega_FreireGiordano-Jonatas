@@ -96,26 +96,62 @@
 
     <!-- ===== MAIN CONTENT ===== -->
     <main>
-        <!-- ===== CREAR HERO SECTION ===== -->
-        <section class="crear-hero-section container-fluid d-flex flex-md-row">
-            <img src="../assets/img/mockup-album.png" alt="" class="container-fluid">
-            <div class="space-agente container-fluid">
-                <textarea class="textarea-agent container-fluid mt-3" name="chat-agente" rows="22" cols="25"
-                    placeholder="Contame más acerca de la foto"></textarea>
-                <div class="botones-agente d-flex align-items-center justify-content-center flex-column">
-                    <button class="btn-chat-agente container-fluid m-2">Enviar</button>
-                    <button class="btn-chat-agente container-fluid m-2">Dictar</button>
+
+        <section class="d-flex flex-column hero-sec-crear pt-4 px-4 gap-3 m-0">
+            <!-- ===== CAROUSEL ===== -->
+            <div class="carousel-crear w-100 d-flex flex-column">
+                <div id="carouselExample" class="carousel slide mb-3">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../assets/img/alaska.jpg" class="d-block w-100 object-fit-cover"
+                                alt="Foto Alaska">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/img/bahia.jpg" class="d-block w-100 object-fit-cover" alt="Foto Bahia">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/img/patagonia.jpg" class="d-block w-100 object-fit-cover"
+                                alt="Foto Patagonia">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
                 </div>
+
+                <!-- CHAT -->
+            <div class="form-floating w-100 h-100 mb-1">
+                <textarea class="form-control h-100 chat-agent" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
+                <label for="floatingTextarea2">Compartí lo que este momento te hizo sentir…</label>
+            </div>
+
+                <!-- ===== Pagination ===== -->
+                <nav aria-label="Page navigation example" class="p-2 botones-pagination">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </section>
 
-        <!-- ===== SECTION Paginas Fotos ===== -->
-        <section class="page-fotos d-flex align-items-center d-flex flex-md-row">
-            <p class="m-0">&larr;</p>
-            <input type="text" placeholder="Page" class="m-0">
-            <h3 class="contador-paginas m-0">de {numero de paginas}</h3>
-            <p class="m-0">&rarr;</p>
-        </section>
+
 
     </main>
 

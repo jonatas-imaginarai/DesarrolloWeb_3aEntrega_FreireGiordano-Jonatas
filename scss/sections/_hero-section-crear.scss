@@ -1,0 +1,19 @@
+@use '../utilities/extend' as extend;
+@use '../utilities/variables';
+
+.hero-sec-crear {
+    width: calc(100vw  - 170px);
+    @extend %elementos-centrados;
+
+    .carousel-crear {
+        @extend %elementos-centrados;
+    }
+
+    .carousel-item {
+        img {
+            border-radius: variables.$radius-large 4px;
+        }
+    }
+
+
+}

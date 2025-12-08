@@ -14,13 +14,13 @@
 
 body {
   width: 100%;
-  overflow-x: hidden;
-  height: 100%;
+ /*  overflow-x: hidden; */
+  min-height: 100vh;
 }
 
 main {
   padding-top: 70px;
   margin-left: 150px;
-  min-height: 100vh;
+  min-height: calc(100vh - 130px);
   background-color: map.get(mapa.$colores, color-bg-body);
 };
