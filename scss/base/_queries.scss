@@ -50,4 +50,24 @@
 
     ;
 
+    .header-user-info {
+        display: none;
+
+        a {
+            display: none;
+        }
+
+        img {
+            display: none;
+        }
+    }
+
+    .img-foto-perfil {
+        display: none;
+    }
+    
+    .hamburguesa {
+        display: block;
+    }
+
 }

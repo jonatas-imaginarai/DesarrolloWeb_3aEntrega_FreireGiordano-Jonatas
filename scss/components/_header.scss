@@ -2,12 +2,14 @@
 @use '../utilities/maps';
 @use 'sass:map';
 @use'../utilities/maps' as mapa;
+@use '../utilities/mixin';
 
 
 .mi-header {
     height: 70px;
     background-color: map.get(mapa.$colores, color-bg-header);
     border-bottom: 1px solid map.get(mapa.$colores, color-border);
+    position: relative;
 
     .h1-header {
 
@@ -71,8 +73,46 @@
 
 .hamburguesa {
     display: none;
-    position: relative;
+    position: absolute;
+    height: 100%;
+    font-family: variables.$fonte-secundaria-headings;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.3rem;
+    transition: variables.$transicion;
+
+    .icono-boton-hamburguesa {
+        color: map.get(mapa.$colores, color-bg-body);
+    }
+
+    a {
+        text-decoration: none;
+        transition: variables.$transicion;
+        color: map.get(mapa.$colores, color-bg-body);
+        &:hover {
+            color: map.get(mapa.$colores, color-accent-hover);
+        }
+        &:active {
+            color: map.get(mapa.$colores, color-accent-active);
+        }
+    }
 }
+
+.background-cuerpo-hamburguesa {
+    background-color: map.get(mapa.$colores, color-bg-header);  
+}
+
+.boton-hamburguesa {
+    text-decoration: none;
+    font-family: variables.$fonte-secundaria-headings;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3rem;
+    transition: variables.$transicion;
+    color: map.get(mapa.$colores, color-bg-body);
+    @include mixin.borders (1px, solid, map.get(mapa.$colores, color-bg-body), variables.$radius-medium);
+}
+
 
 #navbarToggleExternalContent {
     position: absolute;
@@ -98,7 +138,7 @@
         transition: variables.$transicion;
         width: 70px;
         height: 70px;
-        
+
 
         &:hover {
             color: map.get(mapa.$colores, color-accent-hover);
@@ -139,15 +179,18 @@
 
                 &:active {
                     color: map.get(mapa.$colores, color-accent-active)
-                } 
+                }
             }
 
             span {
                 transition: variables.$transicion;
+
                 &:hover {
                     color: map.get(mapa.$colores, color-accent-hover);
                 }
             }
         }
     }
-};
+}
+
+;

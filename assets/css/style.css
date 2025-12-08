@@ -28,6 +28,7 @@ main {
   height: 70px;
   background-color: #415b85;
   border-bottom: 1px solid #d2d2d2;
+  position: relative;
 }
 .mi-header .h1-header .a-header {
   text-decoration: none;
@@ -78,7 +79,43 @@ main {
 
 .hamburguesa {
   display: none;
-  position: relative;
+  position: absolute;
+  height: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3rem;
+  transition: 0.15s ease;
+}
+.hamburguesa .icono-boton-hamburguesa {
+  color: #ffffff;
+}
+.hamburguesa a {
+  text-decoration: none;
+  transition: 0.15s ease;
+  color: #ffffff;
+}
+.hamburguesa a:hover {
+  color: rgb(68, 237, 181);
+}
+.hamburguesa a:active {
+  color: rgb(168, 255, 226);
+}
+
+.background-cuerpo-hamburguesa {
+  background-color: #415b85;
+}
+
+.boton-hamburguesa {
+  text-decoration: none;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.3rem;
+  transition: 0.15s ease;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
 }
 
 #navbarToggleExternalContent {
@@ -424,6 +461,21 @@ footer p a:active {
     width: 100vw;
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  .header-user-info {
+    display: none;
+  }
+  .header-user-info a {
+    display: none;
+  }
+  .header-user-info img {
+    display: none;
+  }
+  .img-foto-perfil {
+    display: none;
+  }
+  .hamburguesa {
+    display: block;
   }
 }
 
