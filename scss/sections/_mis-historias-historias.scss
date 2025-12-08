@@ -2,7 +2,7 @@
 @use '../utilities/extend' as extend;
 @use 'sass:map';
 @use '../utilities/maps' as mapa;
-@use '../utilities/mixin' as mixin;
+@use '../utilities/mixin';
 
 
 .mis-historias-section {
@@ -20,7 +20,8 @@
     }
 
     .card-historia {
-        @include mixin.borders(1px, solid, map.get(mapa.$colores, color-border), variables.$radius-large);
+        border: 1px solid map.get(mapa.$colores, color-border);
+        border-radius: variables.$radius-large;
         position: relative;
         z-index: 2;
         overflow: hidden;

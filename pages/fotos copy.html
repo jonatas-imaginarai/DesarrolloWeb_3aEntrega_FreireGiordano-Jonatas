@@ -96,46 +96,39 @@
 
     <!-- ===== MAIN CONTENT ===== -->
     <main>
-
-        <!-- ===== SECTION - Agregar Fotos ===== -->
-        <section class="agregar-fotos d-flex flex-column mt-5 mx-4 p-4">
-            <h2 class="mb-4">Agregá Fotos</h2>
-            <div class="container-fluid text-center">
-                <div class="row gap-4 grilla-agregar-fotos">
-                    <div class="col-12 col-md-6 col-lg-4 card p-0 conteudo-agregar">
-                        <h3>Drag and Drop</h3>
-                        <img src="../assets/icons/image_upload.png" alt="Upload from Desktop" class="object-fit-cover img-upload p-2">
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 card p-0 conteudo-agregar">
-                        <h3>Celular</h3>
-                        <img src="../assets/icons/cellphone_upload.png" alt="Upload from Cellphone"
-                            class="object-fit-cover img-upload p-2">
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 card p-0 conteudo-agregar">
-                        <h3>Google Fotos</h3>
-                        <img src="../assets/icons/google-photos_2.png" alt="Upload from Google Photos"
-                            class="object-fit-cover img-upload p-2">
-                    </div>
+        <!-- ===== SECTION - Agregá Fotos ===== -->
+        <section class="agregar-fotos">
+            <h2>Agregá Fotos</h2>
+            <div class="d-flex justify-content-center align-items-center p-2 w-100">
+                <div class="row d-flex justify-content-between w-100">
+                    <div class="col-12 col-md-6 col-lg-4 conteudo-agregar text-center">
+                    <h3>Drag and Drop</h3>
+                    <img src="../assets/icons/image_upload.png" alt="" class="w-50 h-50">
                 </div>
-            </div>
+                <div class="col-12 col-md-6 col-lg-4 conteudo-agregar text-center">
+                    <h3>Desde el celular</h3>
+                    <img src="../assets/icons/cellphone_upload.png" alt="" class="w-50 h-50">
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 conteudo-agregar text-center">
+                    <h3>Google Fotos</h3>
+                    <img src="../assets/icons/google-photos_2.png" alt="" class="w-50 h-50">
+                </div>
 
         </section>
 
-        <section class="agregar-fotos d-flex flex-column mt-4 mb-4 mx-4 p-4">
-            <h2 class="mb-4">Fotos</h2>
-            <div class="container-fluid buscar-fotos">
-                <div class="busqueda-fotos w-100 mb-3">
-                    <input type="text" placeholder="Buscar" class="w-75 p-1">
-                    <button class="btn-busqueda-fotos p-1 px-2">Buscar</button>
-                </div>
-                <div class="filtros-fotos">
-                    <button class="btn-filtro-fotos p-1 px-2">Todas</button>
-                    <button class="btn-filtro-fotos p-1 px-2">Historia</button>
-                    <button class="btn-filtro-fotos p-1 px-2">Persona</button>
-                </div>
+        <!-- ===== SECTION - Fotos ===== -->
+        <section class="section-fotos">
+            <h2>Fotos</h2>
+            <div class="busqueda-fotos">
+                <input type="text" placeholder="Buscar">
+                <button class="btn-busqueda-fotos">Buscar</button>
+            </div>
+            <div class="filtros-fotos">
+                <button class="btn-filtro-fotos">Todas</button>
+                <button class="btn-filtro-fotos">Historia</button>
+                <button class="btn-filtro-fotos">Persona</button>
             </div>
         </section>
-
     </main>
 
     <footer class="text-center position-relative bottom-0 d-flex align-items-center justify-content-center p-2">

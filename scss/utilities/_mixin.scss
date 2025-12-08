@@ -9,3 +9,8 @@
     background-position: $back-position;
     background-repeat: $back-repeat;
 }
+
+@mixin borders ($tamano, $tipo, $color, $contorno) {
+    border: $tamano $tipo $color;
+    border-radius: $contorno;
+}
