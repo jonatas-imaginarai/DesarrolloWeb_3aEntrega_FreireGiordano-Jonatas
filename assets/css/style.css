@@ -146,12 +146,12 @@ main {
   color: rgb(68, 237, 181);
 }
 
-.agregar-fotos, .agregar-fotos .grilla-agregar-fotos, .agregar-fotos .conteudo-agregar, .mis-historias-section, .mis-historias-section .grilla-historias, .hero-sec-crear, .hero-sec-crear .carousel-crear, .mi-familia-section, .mi-familia-section .conteudo-card-familia {
+.section-user-info, .agregar-fotos, .agregar-fotos .grilla-agregar-fotos, .agregar-fotos .conteudo-agregar, .mis-historias-section, .mis-historias-section .grilla-historias, .hero-sec-crear, .hero-sec-crear .carousel-crear, .mi-familia-section, .mi-familia-section .conteudo-card-familia {
   justify-content: center;
   align-items: center;
 }
 
-.agregar-fotos, .mis-historias-section, .mi-familia-section, .hero-section {
+.section-user-info, .agregar-fotos, .mis-historias-section, .mi-familia-section, .hero-section {
   background-color: #ededed;
   border: 1px solid #d2d2d2;
   border-radius: 4px;
@@ -385,6 +385,18 @@ footer p a:active {
 
 .section-fotos {
   width: calc(100vw - 170px);
+}
+
+.section-user-info .campo-user-info {
+  font-family: "Josefin Sans", sans-serif;
+}
+.section-user-info .campo-user-info p {
+  font-weight: bold;
+}
+.section-user-info .campo-user-info input {
+  border: 1px solid #d2d2d2;
+  border-radius: 6px;
+  padding: 0.4rem;
 }
 
 @media (max-width: 992px) {

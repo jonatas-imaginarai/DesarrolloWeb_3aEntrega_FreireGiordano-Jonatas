@@ -1,0 +1,24 @@
+@use '../utilities/extend' as extend;
+@use '../utilities/variables';
+@use 'sass:map';
+@use '../utilities/maps' as mapa;
+@use '../utilities/mixin';
+
+.section-user-info {
+    @extend %cards-section;
+    @extend %elementos-centrados;
+
+    .campo-user-info {
+
+        font-family: variables.$fonte-primaria-texto;
+
+        p {
+            font-weight: bold;
+        }
+
+        input {
+            @include mixin.borders (1px, solid, map.get(mapa.$colores, color-border), variables.$radius-large);
+            padding: 0.4rem;
+        }
+    }
+}
