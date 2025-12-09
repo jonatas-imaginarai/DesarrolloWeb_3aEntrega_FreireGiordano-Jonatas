@@ -8,6 +8,10 @@
     <link rel="icon" href="./assets/icons/REFE-SYMBOL-NEGRO.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>imaginar historias</title>
 </head>
@@ -98,7 +102,7 @@
 
         <!-- HERO SECTION -->
         <section class="d-flex flex-column align-items-center justify-content-center mt-4 mx-4 p-3 hero-section">
-            <h2 class="text-center titulo-h2-hero-section mb-3">Bem vindo, Jonatas</h2>
+            <h2 class="text-center titulo-h2-hero-section mb-3" data-aos="zoom-in" data-aos-duration="3000">Bem vindo, Jonatas</h2>
             <p class="text-center texto-hero-section">Qué historia te gustaría contar hoy?</p>
             <button class="btn boton-cta px-5">Crear Nueva Historia</button>
         </section>
@@ -109,7 +113,7 @@
             <h2 class="mb-5">Mis Historias</h2>
             <div class="container-fluid text-center">
                 <div class="row gap-4 grilla-historias">
-                    <div class="col-12 col-md-6 col-lg-4 card p-0 card-historia">
+                    <div class="col-12 col-md-6 col-lg-4 card p-0 card-historia" data-aos="zoom-in" data-aos-duration="2000">
                         <img src="./assets/img/patagonia.jpg" class="card-img-top" alt="Foto Viaje Patagonia">
                         <div class="card-body d-flex flex-column conteudo-card align-items-left">
                             <h5 class="titulo-card">Patagonia</h5>
@@ -117,7 +121,7 @@
                             <a href="#" class="btn boton-historias">Editar</a>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4 card p-0 card-historia">
+                    <div class="col-12 col-md-6 col-lg-4 card p-0 card-historia" data-aos="zoom-in" data-aos-duration="2500">
                         <img src="./assets/img/bahia.jpg" class="card-img-top" alt="Foto Viaje Bahia">
                         <div class="card-body d-flex flex-column conteudo-card align-items-left">
                             <h5 class="titulo-card">Bahia</h5>
@@ -125,7 +129,7 @@
                             <a href="#" class="btn boton-historias">Editar</a>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4 card p-0 card-historia">
+                    <div class="col-12 col-md-6 col-lg-4 card p-0 card-historia" data-aos="zoom-in" data-aos-duration="3000">
                         <img src="./assets/img/munay.jpg" class="card-img-top" alt="Foto Cumpleaños Munay 2 años">
                         <div class="card-body d-flex flex-column conteudo-card align-items-left">
                             <h5 class="titulo-card">Munay</h5>
@@ -133,7 +137,7 @@
                             <a href="#" class="btn boton-historias">Editar</a>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4 card p-0 card-historia">
+                    <div class="col-12 col-md-6 col-lg-4 card p-0 card-historia" data-aos="zoom-in" data-aos-duration="3500">
                         <img src="./assets/img/pantanal.jpg" class="card-img-top" alt="Foto Rio Pantanal">
                         <div class="card-body d-flex flex-column conteudo-card align-items-left">
                             <h5 class="titulo-card">Pantanal</h5>
@@ -141,7 +145,7 @@
                             <a href="#" class="btn boton-historias">Editar</a>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4 card p-0 card-historia">
+                    <div class="col-12 col-md-6 col-lg-4 card p-0 card-historia" data-aos="zoom-in" data-aos-duration="4000">
                         <img src="./assets/img/alaska.jpg" class="card-img-top" alt="Foto Alaska Inverno 2013">
                         <div class="card-body d-flex flex-column conteudo-card align-items-left">
                             <h5 class="titulo-card">Alaska</h5>
@@ -159,25 +163,25 @@
             <button class="btn mb-2 boton-cta-secondary px-5">Agregar Miembros</button>
             <div class="d-flex flex-column w-100 cards-familia">
                 <div class="mb-0 column-madre-padre">
-                    <div class="d-flex flex-column conteudo-card-familia text-center">
+                    <div class="d-flex flex-column conteudo-card-familia text-center" data-aos="zoom-out-left" data-aos-duration="2000">
                         <h3 class="text-center">{Nombre Padre}</h3>
                         <img src="./assets/img/JonatasFG.jpg" alt="Foto Pareja">
                     </div>
-                    <div class="d-flex flex-column conteudo-card-familia text-center">
+                    <div class="d-flex flex-column conteudo-card-familia text-center" data-aos="zoom-out-right" data-aos-duration="2000">
                         <h3 class="text-center">{Nombre Madre}</h3>
                         <img src="./assets/img/JonatasFG.jpg" alt="Foto Pareja">
                     </div>
                 </div>
                 <div class="mb-0 column-hijos">
-                    <div class="d-flex flex-column conteudo-card-familia text-center">
+                    <div class="d-flex flex-column conteudo-card-familia text-center" data-aos="zoom-out-down" data-aos-duration="3000">
                         <h3 class="text-center">{Nombre Hijo 1}</h3>
                         <img src="./assets/img/JonatasFG.jpg" alt="Foto Pareja">
                     </div>
-                    <div class="d-flex flex-column conteudo-card-familia text-center">
+                    <div class="d-flex flex-column conteudo-card-familia text-center" data-aos="zoom-out" data-aos-duration="3500">
                         <h3 class="text-center">{Nombre Hijo 2}</h3>
                         <img src="./assets/img/JonatasFG.jpg" alt="Foto Pareja">
                     </div>
-                    <div class="d-flex flex-column conteudo-card-familia text-center">
+                    <div class="d-flex flex-column conteudo-card-familia text-center" data-aos="zoom-out-up" data-aos-duration="4000">
                         <h3 class="text-center">{Nombre Hijo 3}</h3>
                         <img src="./assets/img/JonatasFG.jpg" alt="Foto Pareja">
                     </div>
@@ -198,6 +202,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
